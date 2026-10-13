@@ -41,7 +41,7 @@ ol {
 
 .title {
   padding-block-end: 23px;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 93%;
@@ -72,12 +72,12 @@ ol {
 }
 
 .content__list {
-  block-size: 298px;
   overflow: auto;
 }
 
 .content__list-container {
   position: relative;
+  block-size: 298px;
 }
 
 .content__details {
@@ -86,7 +86,6 @@ ol {
   justify-content: space-between;
   inline-size: 100%;
   block-size: 100%;
-  max-height: 534px;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -115,8 +114,16 @@ ol {
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
+  text-overflow: ellipsis;   
+  white-space: nowrap;   
+  overflow: hidden;
+  width: 196px;
 }
 
+.content__card-link {
+  display: block;
+  background-color: #545050;
+}
 
 .content__card-link:hover {
   text-decoration: underline;
@@ -241,6 +248,7 @@ ol {
   font-weight: 700;
   background-color: transparent;
   cursor: pointer;
+  min-block-size: 34px;
 }
 
 .button:hover {
@@ -263,12 +271,10 @@ ol {
 .search-form__submit-button {
   align-self: flex-end;
   min-inline-size: 194px;
-  min-block-size: 34px;
 }
 
 .more-button {
   inline-size: 100%;
-  min-block-size: 34px;
 }
 
 /* Кастомный скроллбар */
